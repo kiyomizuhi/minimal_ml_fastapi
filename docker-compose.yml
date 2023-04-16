@@ -1,0 +1,14 @@
+version: "3"
+services:
+  minimal-ml-fastapi:
+    container_name: minimal-ml-fastapi
+    image: minimal-ml-fastapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
